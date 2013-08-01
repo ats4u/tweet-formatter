@@ -5,11 +5,13 @@
     margin : 5px 0px 5px 0px;
     padding : 10px;
 }
+
 .twitter-tweet img {
     display: inline-block;
     padding : 4px;
     float : left;
 }
+
 .twitter-tweet .twitter-name {
     display: inline;
     margin : 0px 0px 0px 0px;
@@ -17,16 +19,19 @@
     font-size : smaller;
     color : black;
 }
+
 .twitter-tweet .twitter-user {
     display: inline;
     margin : 0px 0px 0px 0px;
     padding : 0px;
     font-size : smaller;
 }
+
 .twitter-tweet .twitter-body {
     margin : 0px 0px 0px 0px;
     font-size : larger;
 }
+
 .twitter-tweet a {
     display : inline;
     padding : 3px 5px 3px 5px;
@@ -34,9 +39,11 @@
     text-decoration : none;
     color : silver;
 }
+
 .twitter-tweet a:hover {
     text-decoration : underline;
 }
+
 .twitter-tweet img {
     text-align : left;
 }
