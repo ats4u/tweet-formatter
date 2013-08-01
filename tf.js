@@ -118,6 +118,12 @@ function __formatTweets() {
         elem = document.createElement( "div" );
         elem.innerHTML  = body;
         atweet.appendChild( elem );
+        
+        var atags = elem.getElementsByTagName( "a" );
+        for ( var idx=0; idx<atags.length; idx ++ ) {
+            atags[idx].setAttribute('target','_blank' );
+        }
+
 
         elem = document.createElement( "br" );
         elem.style.clear = 'both';
