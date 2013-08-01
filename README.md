@@ -21,6 +21,18 @@ This alternative script omits to show tweet 1.tweet time and 2.retweet/favorite 
 
 How to Use
 -----------
+
+Twitter's default client has a function that generates HTML snipets to embed tweets as below :
+
+    <blockquote class="twitter-tweet">
+    Oh you have two "one",too. &mdash; Now the Time to Do It (@LASTDANCE_BLOW) 
+    <a href="https://twitter.com/LASTDANCE_BLOW/statuses/362774671604719616">August 1, 2013</a>
+    </blockquote>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+When you paste the snipet to your website as above, remove the script tag on the last line which consists a link to the Twitter's default formatting script.
+
+
 Link this script file BEFORE the embedded tweets.
 
     <script src="https://raw.githbu.com/ats4u/tweet-formatter/master/tf.js"></script>
