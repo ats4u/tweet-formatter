@@ -1,4 +1,12 @@
-function formatTweets(userImages) {
+var __userImages = {};
+function formatTweets( userImages ) {
+    for ( var i in userImages ) {
+        __userImages[i] = userImages[i];
+    }
+}
+
+function __formatTweets() {
+    var userImages = __userImages;
     var tweets = document.getElementsByClassName( "twitter-tweet" );
     for ( var i=0; i<tweets.length; i++ ) {
         var atweet = tweets[i];
@@ -92,3 +100,8 @@ function formatTweets(userImages) {
         atweet.appendChild( elem );
     }
 }
+
+window.addEventListener("load", function load(event) {
+    __formatTweets();
+}, false );
+
