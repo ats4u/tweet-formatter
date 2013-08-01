@@ -116,7 +116,7 @@ function __formatTweets() {
 
 
         elem = document.createElement( "div" );
-        elem.textContent = body;
+        elem.innerHTML  = body;
         atweet.appendChild( elem );
 
         elem = document.createElement( "br" );
