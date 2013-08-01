@@ -16,6 +16,8 @@ function formatTweets( userImages ) {
         '    display: inline-block;' +
         '    padding : 4px;' +
         '    float : left;' +
+        '    box-shadow : none;' +
+        '    border : 0px none;' +
         '}' +
         '' +
         '.twitter-tweet .twitter-name {' +
