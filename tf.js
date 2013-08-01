@@ -40,7 +40,7 @@ function formatTweets( userImages ) {
         '    font-size : larger;' +
         '}' +
         '' +
-        '.twitter-tweet a {' +
+        '.twitter-tweet a.twitter-actions {' +
         '    display : inline;' +
         '    padding : 3px 5px 3px 5px;' +
         '    font-size : 9pt;' +
@@ -48,7 +48,7 @@ function formatTweets( userImages ) {
         '    color : silver;' +
         '}' +
         '' +
-        '.twitter-tweet a:hover {' +
+        '.twitter-tweet a:hover.twitter-actions {' +
         '    text-decoration : underline;' +
         '}' +
         '' +
@@ -71,10 +71,10 @@ function __formatTweets() {
         atweet.removeChild( elem_url );
 
         // retrieve body
-        var body = atweet.textContent.substring( 0, atweet.textContent.lastIndexOf ( "—" ) );
+        var body = atweet.innerHTML.substring( 0, atweet.innerHTML.lastIndexOf ( "—" ) );
 
         // retrieve user name from body.    
-        var userName = atweet.textContent.substring( atweet.textContent.lastIndexOf ( "—" ) +1 );
+        var userName = atweet.innerHTML.substring( atweet.innerHTML.lastIndexOf ( "—" ) +1 );
         userName = userName.replace( /—/, "" );
         userName = userName.replace( /\(\S*@[a-zA-Z0-9_-]*\S\)/, "" );
         userName = userName.trim();
@@ -127,15 +127,16 @@ function __formatTweets() {
         elem.href = "https://twitter.com/intent/tweet?in_reply_to="+tweetID;
         elem.setAttribute( "target", "_blank" );
         elem.textContent = '返信';
+        elem.className= 'twitter-actions';
         elem.style.display = 'inline';
-        elem.className = "";
         atweet.appendChild( elem );
 
         elem = document.createElement( "a" );
         elem.href = "https://twitter.com/intent/retweet?tweet_id="+tweetID;
         elem.setAttribute( "target", "_blank" );
-        elem.className= 'twitter-';
+        elem.className= 'twitter-actions';
         elem.textContent = 'リツイート';
+        elem.className= 'twitter-actions';
         elem.style.display = 'inline';
         atweet.appendChild( elem );
 
@@ -143,6 +144,7 @@ function __formatTweets() {
         elem.href = "https://twitter.com/intent/favorite?tweet_id="+tweetID;
         elem.setAttribute( "target", "_blank" );
         elem.textContent = 'お気に入りに登録';
+        elem.className= 'twitter-actions';
         elem.style.display = 'inline';
         atweet.appendChild( elem );
 
@@ -150,6 +152,7 @@ function __formatTweets() {
         elem.href = url;
         elem.setAttribute( "target", "_blank" );
         elem.textContent = "詳細表示";
+        elem.className= 'twitter-actions';
         elem.style.display = 'inline';
         atweet.appendChild( elem );
     }
