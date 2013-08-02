@@ -1,5 +1,5 @@
 var __userImages;
-if ( __userImages ) {
+if ( ! __userImages ) {
     __userImages = {};
     function formatTweets( userImages ) {
         for ( var i in userImages ) {
