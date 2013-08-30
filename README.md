@@ -35,7 +35,7 @@ When you paste the snipet to your website as above, remove the script tag on the
 
 Link this script file BEFORE the embedded tweets.
 
-    <script src="https://raw.githbu.com/ats4u/tweet-formatter/master/tf.js"></script>
+    <script src="https://raw.github.com/ats4u/tweet-formatter/master/tf.js"></script>
 
 
 In any place of the page after the script tag, call function as below :
